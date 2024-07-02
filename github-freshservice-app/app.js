@@ -5,10 +5,6 @@ const app = express();
 const FRESHSERVICE_DOMAIN = 'redfernstech.freshservice.com';
 const FRESHSERVICE_API_KEY = 'ujv5sxBYLBAA9WLIRP';
 
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
-
 app.post('/webhook', express.json({type: 'application/json'}),
 async (req, res) => {
 
@@ -41,5 +37,5 @@ async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${PORT}`);
 });
